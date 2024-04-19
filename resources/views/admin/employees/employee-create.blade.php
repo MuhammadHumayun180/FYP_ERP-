@@ -16,7 +16,7 @@
                 {{-- <!-- Card Header - Dropdown --> --}}
 
                 <div class="card-header d-sm-flex align-items-center justify-content-between mb-4">
-                    <h3 class="h3 mb-0 text-gray-800">Create Employee</h3>
+                    <h3 class="h3 mb-0 text-gray-800">Employee</h3>
                     <a href="{{ route('admin.employee.list') }}" class="btn btn-success">Employee list</a>
                 </div>
 

@@ -18,6 +18,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\FingerprintController;
 use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ForecastController;
 
 
 
@@ -191,6 +192,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'custom.auth']], fun
      Route::controller(AnalyticsController::class)->group(function(){
             Route::get('/finance-accounting/analytics-list','index')->name('admin.analytics-list');
      });
+     
+    //  Route::controller(ForecastController::class)->group(function(){
+    //     Route::get('/forecast','getForecast')->name('admin.bi');
+    // });
+
+   
+    Route::get('/forecast', [ForecastController::class, 'getForecast'])->name('admin.forecast');
+
 
      #########################  Finance and accounting section end #######################
 

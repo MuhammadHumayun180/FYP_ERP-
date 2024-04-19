@@ -122,7 +122,7 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Business Intelligence:</h6>
-                <a class="collapse-item" href="login.html">Business Forecasting</a>
+                <a class="collapse-item" href="{{route('admin.forecast')}}">Business Forecasting</a>
                 <a class="collapse-item" href="register.html">Budgeting</a>
                 <a class="collapse-item" href="forgot-password.html">Business Analysis</a>
                 <a class="collapse-item" href="forgot-password.html">Collaboration tools</a>
