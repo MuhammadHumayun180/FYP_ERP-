@@ -97,6 +97,7 @@
 
 
                             <button type="submit" class="btn btn-primary">Add Company</button>
+
                         </form>
                     </div>
                 </div>
