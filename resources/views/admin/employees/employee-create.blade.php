@@ -1,11 +1,17 @@
 {{-- resources/views/employees/create.blade.php --}}
 
+<head>
+    
+    <!-- Link Font Awesome CSS -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
 @extends('layouts.app')
 
 @section('main-content')
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
+
 
     {{-- <!-- Content Row --> --}}
     <div class="row">
@@ -159,6 +165,8 @@
                             <!-- Add more fields as needed -->
 
                             <button type="submit" class="btn btn-primary">Add Employee</button>
+                                
+
                         </form>
                     </div>
                 </div>
