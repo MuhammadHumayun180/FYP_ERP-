@@ -18,6 +18,8 @@
 
                 <div class="card-header d-sm-flex align-items-center justify-content-between mb-4">
                     <h3 class="h3 mb-0 text-gray-800">Sales</h3>
+                    <button type="button" class="btn btn-primary" onclick="generateCSV()">Generate CSV</button>
+
                    
                 </div>
 
@@ -31,8 +33,9 @@
     </div>
 </div>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 <script>
     var forecastData = {!! json_encode($forecastData) !!};
     var ctx = document.getElementById('forecastChart').getContext('2d');
@@ -75,4 +78,36 @@
             }
         }
     });
+
+    function    generateCSV() {
+        // Make an AJAX request to the export CSV endpoint
+        fetch('{{ route("export.csv") }}', {
+            method: 'GET',
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.blob();
+            }
+            else{
+
+                throw new Error('Failed to export CSV');
+            }
+        })
+        .then(blob => {
+            // Create a temporary anchor element to download the CSV file
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'export.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        })
+        .catch(error => {
+            console.error('CSV export failed:', error.message);
+            alert('Failed to export CSV');
+        });
+    }
 </script>
+@endsection

@@ -19,7 +19,7 @@ use App\Http\Controllers\FingerprintController;
 use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ForecastController;
-
+use App\Http\Controllers\ExportController;
 
 
 /*
@@ -193,6 +193,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'custom.auth']], fun
             Route::get('/finance-accounting/analytics-list','index')->name('admin.analytics-list');
      });
      
+
+     
+
     //  Route::controller(ForecastController::class)->group(function(){
     //     Route::get('/forecast','getForecast')->name('admin.bi');
     // });
@@ -203,10 +206,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'custom.auth']], fun
 
      #########################  Finance and accounting section end #######################
 
-
+     Route::get('/export-csv', [ExportController::class, 'exportCSV'])->name('export.csv');
 
     //  Route::get('/get-attendance', [FingerprintController::class, 'getAttendance']);
 });
-######################################
+######################################  
 # // Admin  Routes end            // #
 ######################################
