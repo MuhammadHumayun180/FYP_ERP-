@@ -11746,9 +11746,12 @@
 			 *      } );
 			 *    } );
 			 */
-			"sProcessing": "Processing...",
+			"sProcessing": "<div class='processing-spinner'></div> Processing..."
+
 	
 	
+
+
 			/**
 			 * Details the actions that will be taken when the user types into the
 			 * filtering input text box. The variable "_INPUT_", if used in the string,
