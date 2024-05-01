@@ -18,7 +18,7 @@ class ForecastController extends Controller
 
             // Extract forecasted values from response
             $forecastData = isset($data['forecast']) ? $data['forecast'] : [];
-            dump($forecastData);
+            // dump($forecastData);
             // Plot the graph using the forecasted values (proceeds data)
             // Implement graph plotting logic here using $forecastData
 
