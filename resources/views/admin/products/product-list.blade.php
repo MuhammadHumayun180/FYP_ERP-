@@ -72,41 +72,43 @@
 @push('scripts')
 <script>
     $(function() {
-        $('#product-table').DataTable({
-            processing: true,
-            serverSide: true,
-            ajax: "{{ route('admin.product-list') }}",
-            columns: [
-                { data: 'DT_RowIndex', name: 'DT_RowIndex' },
-                { data: 'name', name: 'name' },
-                { data: 'category', name: 'category' },
-                { data: 'brand', name: 'brand' },
-                { data: 'supplier.name', name: 'supplier.name' }, // Supplier Name
-                { data: 'quantity', name: 'quantity' },
-                { data: 'price', name: 'price' },
-                { data: 'total_price', name: 'total_price' },
-                { data: 'payments.0.amount', name: 'payments.0.amount' }, // Payment Amount
-                { data: 'payments.0.transaction_type', name: 'payments.0.transaction_type' }, // Transaction Type
-                { data: 'payments.0.payment_status', name: 'payments.0.payment_status' }, // Payment Status
-                { data: 'payments.0.transaction_id', name: 'payments.0.transaction_id' }, // Transaction ID
-                { data: 'payments.0.payment_method', name: 'payments.0.payment_method' }, // Payment Method
-                { data: 'payments.0.bank_name', name: 'payments.0.bank_name' }, // Bank Name
-                { data: 'payments.0.bank_account_number', name: 'payments.0.bank_account_number' }, // Bank Account Number
-                { data: 'payments.0.transaction_reference', name: 'payments.0.transaction_reference' }, // Transaction Reference
-                { data: 'action', name: 'action', orderable: false, searchable: false },
-            ],
-            "footerCallback": function (row, data, start, end, display) {
-                var api = this.api();
+    $('#product-table').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('admin.product-list') }}",
+        scrollX: true, // Enable horizontal scrolling
+        columns: [
+            { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+            { data: 'name', name: 'name' },
+            { data: 'category', name: 'category' },
+            { data: 'brand', name: 'brand' },
+            { data: 'supplier.name', name: 'supplier.name' },
+            { data: 'quantity', name: 'quantity' },
+            { data: 'price', name: 'price' },
+            { data: 'total_price', name: 'total_price' },
+            { data: 'payments.0.amount', name: 'payments.0.amount' },
+            { data: 'payments.0.transaction_type', name: 'payments.0.transaction_type' },
+            { data: 'payments.0.payment_status', name: 'payments.0.payment_status' },
+            { data: 'payments.0.transaction_id', name: 'payments.0.transaction_id' },
+            { data: 'payments.0.payment_method', name: 'payments.0.payment_method' },
+            { data: 'payments.0.bank_name', name: 'payments.0.bank_name' },
+            { data: 'payments.0.bank_account_number', name: 'payments.0.bank_account_number' },
+            { data: 'payments.0.transaction_reference', name: 'payments.0.transaction_reference' },
+            { data: 'action', name: 'action', orderable: false, searchable: false },
+        ],
+        "footerCallback": function (row, data, start, end, display) {
+            var api = this.api();
 
-                // Compute the sum of total_price
-                var grandTotal = api.column(7).data().reduce(function (acc, val) {
-                    return acc + parseFloat(val);
-                }, 0);
+            // Compute the sum of total_price
+            var grandTotal = api.column(7).data().reduce(function (acc, val) {
+                return acc + parseFloat(val);
+            }, 0);
 
-                $('#grand-total').text(grandTotal.toFixed(2));
-            }
-        });
+            $('#grand-total').text(grandTotal.toFixed(2));
+        }
     });
+});
+
 </script>
 @endpush
 
