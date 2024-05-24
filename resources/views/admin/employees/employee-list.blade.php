@@ -12,7 +12,7 @@
     .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
     padding-left: 0.5rem;
     padding-right: -2.5rem;
-    m: ;
+    
 }
 
 
@@ -76,6 +76,7 @@
               processing: true,
               serverSide: true,
               ajax: "{{ route('admin.employee.list') }}",
+              scrollX: true, // Enable horizontal scrolling
               columns: [
                   { data: 'DT_RowIndex', name: 'DT_RowIndex' },
                   { data: 'first_name', name: 'first_name', orderable: false, searchable: false },

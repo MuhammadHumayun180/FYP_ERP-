@@ -67,6 +67,7 @@
             processing: true,
             serverSide: true,
             ajax: "{{ route('admin.crm-salesServices-list') }}",
+            scrollX: true, // Enable horizontal scrolling
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
                 { data: 'product_name', name: 'product_name' },

@@ -66,6 +66,7 @@
             processing: true,
             serverSide: true,
             ajax: "{{ route('admin.procurement-list') }}",
+            scrollX: true, // Enable horizontal scrolling
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
                 { data: 'product_name', name: 'product_name' },

@@ -70,6 +70,7 @@
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('admin.time-attendance-reports.list') }}",
+                scrollX: true, // Enable horizontal scrolling
                 columns: [
                     { data: 'DT_RowIndex', name: 'DT_RowIndex' },
                     { data: 'employee_name', name: 'employee_name', orderable: false, searchable: false },

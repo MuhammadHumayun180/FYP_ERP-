@@ -55,6 +55,7 @@
             processing: true,
             serverSide: true,
             ajax: "{{ route('admin.talent_acquisitions.list') }}", // Adjust the route
+            scrollX: true, // Enable horizontal scrolling
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
                 { data: 'full_name', name: 'full_name' },

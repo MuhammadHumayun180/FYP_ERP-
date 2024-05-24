@@ -89,6 +89,7 @@
               processing: true,
               serverSide: true,
               ajax: '{{ route("admin.sales.automation-list") }}',
+              scrollX: true, // Enable horizontal scrolling
               columns: [
                   { data: 'id', name: 'id' },
                   { data: 'customer_name', name: 'customer_name' },

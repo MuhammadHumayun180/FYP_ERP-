@@ -70,6 +70,7 @@ padding-right: -2.5rem;
             processing: true,
             serverSide: true,
             ajax: "{{ route('admin.supplier-list') }}",
+            scrollX: true, // Enable horizontal scrolling
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
                 { data: 'name', name: 'name' },
