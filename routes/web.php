@@ -208,6 +208,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'custom.auth']], fun
 
      Route::get('/export-csv', [ExportController::class, 'exportCSV'])->name('export.csv');
 
+     Route::get('/products', [ProductController::class, 'showProductDropdown'])->name('product_base_analysis');
+    Route::get('/analyze-product', [ProductController::class, 'analyzeProduct']);
+
     //  Route::get('/get-attendance', [FingerprintController::class, 'getAttendance']);
 });
 ######################################  

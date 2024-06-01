@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Supplier;
 use App\Models\Payment;
-
+use Illuminate\Support\Facades\Http;
 
 use Yajra\DataTables\Facades\DataTables;
 
@@ -178,6 +178,28 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
         $product->delete();
         return redirect()->route('admin.product-list')->with('success', 'Product deleted successfully');
+    }
+        public function showProductDropdown()
+        {
+            // Fetch product list from Flask backend
+            $response = Http::get('http://localhost:5000/products');  // Replace with your Flask backend URL
+            $products = $response->json()['products'];
+
+            // Pass product list to the view
+            return view('admin.products.product-base-analysis', compact('products'));
+        }
+
+    public function analyzeProduct(Request $request)
+    {
+        $productName = $request->query('product_name');
+
+        // Fetch product analysis from Flask backend
+        $response = Http::get('http://localhost:5000/analyze-products', [
+            'product_name' => $productName
+        ]);
+
+        // Return the response from Flask backend
+        return response()->json($response->json());
     }
 
 }
