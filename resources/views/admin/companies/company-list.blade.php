@@ -46,6 +46,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Action</th>
                                     <th>name</th>
                                     <th>email</th>
                                     <th>phone</th>
@@ -55,7 +56,6 @@
                                     <th>city</th>
                                     <th>state</th>
                                     <th>zip_code</th>
-                                    <th>Action</th>
                                 </tr>
                             </thead>
                         </table>
@@ -78,6 +78,7 @@
               scrollX: true, // Enable horizontal scrolling
               columns: [
                   { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+                  { data: 'action', name: 'action', orderable: false, searchable: false },
                   { data: 'name', name: 'name', orderable: false, searchable: false },
                   { data: 'phone', name: 'phone' },
                   { data: 'email', name: 'email' },
@@ -88,7 +89,6 @@
                   { data: 'state', name: 'state' },
                   { data: 'zip_code', name: 'zip_code' },
 
-                  { data: 'action', name: 'action', orderable: false, searchable: false },
               ]
           });
 

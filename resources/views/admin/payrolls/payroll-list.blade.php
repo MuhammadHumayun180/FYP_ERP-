@@ -56,6 +56,7 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
+                                        <th>Action</th>
                                         <th>Employee</th>
                                         <th>Basic_Salary</th>
                                         <th>Allowances</th>
@@ -66,7 +67,6 @@
                                         <th>Deductions</th>
                                         <th>Net_Salary</th>
                                         <th>Payment_Date</th>
-                                        <th>Action</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -92,6 +92,7 @@
               scrollX: true, // Enable horizontal scrolling
               columns: [
                   { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+                  { data: 'action', name: 'action', orderable: false, searchable: false },
                   { data: 'employee_name', name: 'employee_name', orderable: false, searchable: false },
                   { data: 'basic_salary', name: 'basic_salary' },
                   { data: 'allowances', name: 'allowances' },
@@ -103,7 +104,6 @@
                   { data: 'net_salary', name: 'net_salary' },
                   { data: 'payment_date', name: 'payment_date' },
 
-                  { data: 'action', name: 'action', orderable: false, searchable: false },
               ]
           });
 

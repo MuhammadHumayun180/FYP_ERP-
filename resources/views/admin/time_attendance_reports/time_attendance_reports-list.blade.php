@@ -43,13 +43,13 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
+                                        <th>Action</th>
                                         <th>Employee</th>
                                         <th>Report Date</th>
                                         <th>Hours Worked</th>
                                         <th>Overtime Hours</th>
                                         <th>Leaves Taken</th>
                                         <th>Lateness Minutes</th>
-                                        <th>Action</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -73,13 +73,13 @@
                 scrollX: true, // Enable horizontal scrolling
                 columns: [
                     { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+                    { data: 'action', name: 'action', orderable: false, searchable: false },
                     { data: 'employee_name', name: 'employee_name', orderable: false, searchable: false },
                     { data: 'report_date', name: 'report_date' },
                     { data: 'hours_worked', name: 'hours_worked' },
                     { data: 'overtime_hours', name: 'overtime_hours' },
                     { data: 'leaves_taken', name: 'leaves_taken' },
                     { data: 'lateness_minutes', name: 'lateness_minutes' },
-                    { data: 'action', name: 'action', orderable: false, searchable: false },
                 ]
             });
         });

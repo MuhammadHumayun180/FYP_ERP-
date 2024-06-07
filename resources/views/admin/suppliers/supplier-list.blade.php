@@ -3,15 +3,14 @@
 @section('main-content')
 
 @push('page-css')
-<style>
-/* Add your custom CSS styles here */
+
+  
 
 <style>
 
 table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>td.sorting_asc, table.dataTable thead>tr>td.sorting_desc, table.dataTable thead>tr>td.sorting {
     padding-right: 19px;
 }
-
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
 padding-left: 0.5rem;
 padding-right: -2.5rem;
@@ -47,10 +46,10 @@ padding-right: -2.5rem;
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Action</th>
                                     <th>Name</th>
                                     <th>Contact Person</th>
                                     <th>Contact Number</th>
-                                    <th>Action</th>
                                 </tr>
                             </thead>
                         </table>
@@ -73,11 +72,11 @@ padding-right: -2.5rem;
             scrollX: true, // Enable horizontal scrolling
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+                { data: 'action', name: 'action', orderable: false, searchable: false },
                 { data: 'name', name: 'name' },
                 { data: 'contact_person', name: 'contact_person' },
                 { data: 'contact_number', name: 'contact_number' },
-                { data: 'action', name: 'action', orderable: false, searchable: false },
-            ]
+            ],
         });
     });
 </script>

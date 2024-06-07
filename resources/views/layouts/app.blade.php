@@ -20,11 +20,13 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+    <!-- <link rel="stylesheet" href="{{ asset('css/loader.css')}}"> -->
+
         {{-- datatables start --}}
             {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/> --}}
             {{-- <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet"> --}}
             <link href="{{ asset('/data-tables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
-            <link href="{{ asset('/data-tables/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('/data-tabvles/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
         {{-- datatables end --}}
 
         {{-- toaster message alert start --}}
@@ -38,11 +40,14 @@
     {{-- <!-- DataTables Responsive CSS --> --}}
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css"/>
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         {{-- cv icon url end --}}
 
+
         @stack('page-css')
+
+
 
 </head>
 
@@ -59,6 +64,8 @@
 
             {{-- <!-- Main Content --> --}}
             <div id="content">
+
+            
 
                 {{-- <!-- Topbar --> --}}
                     @include('../partials/header')
@@ -78,8 +85,6 @@
 
     </div>
     {{-- <!-- End of Page Wrapper --> --}}
-
-
 
 
 
@@ -175,6 +180,8 @@
     };
             </script>
     @stack('scripts')
+
+
 
 </body>
 

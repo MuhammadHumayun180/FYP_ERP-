@@ -27,8 +27,8 @@ class ProcurementController extends Controller
                 })
                 ->addColumn('action', function($row) {
                     $actionBtn = "<div class='d-flex justify-content-center '>
-                    <a href='".route('admin.procurement-edit',$row->id)."' class='edit btn btn-success btn-sm mx-1'>Edit</a>
-                    <a href='".route('admin.procurement-delete',$row->id)."' class='delete btn btn-danger btn-sm mx-1'>Delete</a>
+                    <a href='".route('admin.procurement-edit',$row->id)."'  class='edit btn  btn-sm mx-1'><i class='fa-solid fa-pen-to-square' style='color:green'></i></a>
+                    <a href='".route('admin.procurement-delete',$row->id)."' class='delete btn  btn-sm mx-1'><i class='fa-solid fa-trash'style='color:red'></i></a>
                     </div>";
                     return $actionBtn;
                 })

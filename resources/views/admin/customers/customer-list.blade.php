@@ -45,6 +45,7 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
+                                            <th>Action</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
@@ -54,7 +55,6 @@
                                             <th>ZipCode</th>
                                             <th>IDCardNumber</th>
                                             <th>Other Details</th>
-                                            <th>Action  </th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -80,6 +80,7 @@
               scrollX: true, // Enable horizontal scrolling
               columns: [
                   { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+                  { data: 'action', name: 'action', orderable: false, searchable: false },
                   { data: 'name', name: 'name', orderable: false, searchable: false },
                   { data: 'email', name: 'email' },
                   { data: 'phone', name: 'phone' },
@@ -90,7 +91,6 @@
                   { data: 'id_card_number', name: 'id_card_number' },
                   { data: 'other_details', name: 'other_details' },
 
-                  { data: 'action', name: 'action', orderable: false, searchable: false },
               ]
           });
 

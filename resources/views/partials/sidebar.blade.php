@@ -3,8 +3,8 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+        <div class="sidebar-brand-icon">
+        <i><img src="{{ asset('img/logo.png')}}" width="100%" height="100%" alt=""></i>
         </div>
         <div class="sidebar-brand-text mx-3">ERP Admin <sup></sup></div>
     </a>

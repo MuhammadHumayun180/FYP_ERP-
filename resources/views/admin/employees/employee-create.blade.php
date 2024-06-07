@@ -105,7 +105,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="date_of_hire" class="form-label">Date of Hire</label>
+                                <label for="date_of_hire" class="form-label">date of joining</label>
                                 <input type="date" class="form-control @error('date_of_hire') is-invalid @enderror {{ old('date_of_hire') ? 'is-valid' : '' }} " id="date_of_hire" name="date_of_hire" value="{{ old('date_of_hire') }}" >
                                 @error('date_of_hire')
                                     <div class="invalid-feedback">{{ $message }}</div>

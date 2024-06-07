@@ -4,7 +4,7 @@
 
 @push('page-css')
 <style>
-    /* Add your custom CSS styles here */
+      
 </style>
 @endpush
 
@@ -27,6 +27,7 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
+                                        <th>Action</th>
                                         <th>Product_Name</th>
                                         <th>Customer_Name</th>
                                         <th>Quantity</th>
@@ -40,7 +41,6 @@
                                         <th>BankName</th>
                                         <th>Account_Number</th>
                                         <th>Transaction_Reference</th>
-                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
@@ -70,6 +70,7 @@
             scrollX: true, // Enable horizontal scrolling
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+                { data: 'action', name: 'action', orderable: false, searchable: false },
                 { data: 'product_name', name: 'product_name' },
                 { data: 'customer_name', name: 'customer_name' },
                 { data: 'quantity', name: 'quantity' },
@@ -83,7 +84,6 @@
                 { data: 'bank_name', name: 'bank_name' },
                 { data: 'bank_account_number', name: 'bank_account_number' },
                 { data: 'transaction_reference', name: 'transaction_reference' },
-                { data: 'action', name: 'action', orderable: false, searchable: false },
             ],
             "footerCallback": function (row, data, start, end, display) {
                 var api = this.api();

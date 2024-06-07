@@ -47,6 +47,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Action</th>
                                     <th>FirstName</th>
                                     <th>LastName</th>
                                     <th>Email</th>
@@ -56,7 +57,6 @@
                                     <th>IDNumber</th>
                                     <th>Security Number</th>
                                     <th>Contact Number</th>
-                                    <th>Action</th>
                                 </tr>
                             </thead>
                         </table>
@@ -79,6 +79,8 @@
               scrollX: true, // Enable horizontal scrolling
               columns: [
                   { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+                  
+                  { data: 'action', name: 'action', orderable: false, searchable: false },
                   { data: 'first_name', name: 'first_name', orderable: false, searchable: false },
                   { data: 'last_name', name: 'last_name' },
                   { data: 'email', name: 'email' },
@@ -88,8 +90,6 @@
                   { data: 'national_id', name: 'national_id' },
                   { data: 'social_security_number', name: 'social_security_number' },
                   { data: 'contact_number', name: 'contact_number' },
-
-                  { data: 'action', name: 'action', orderable: false, searchable: false },
               ]
           });
 

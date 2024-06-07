@@ -56,12 +56,12 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
+                                        <th>Action</th>
                                         <th>Customer</th>
                                         <th>Product</th>
                                         <th>Quantity</th>
                                         <th>Price</th>
                                         <th>Total Price</th>
-                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
@@ -92,12 +92,12 @@
               scrollX: true, // Enable horizontal scrolling
               columns: [
                   { data: 'id', name: 'id' },
+                  { data: 'action', name: 'action', orderable: false, searchable: false },
                   { data: 'customer_name', name: 'customer_name' },
                   { data: 'product_name', name: 'product_name' },
                   { data: 'quantity', name: 'quantity' },
                   { data: 'price', name: 'price' },
                   { data: 'total_amount', name: 'total_amount' },
-                  { data: 'action', name: 'action', orderable: false, searchable: false }
               ],
             "footerCallback": function (row, data, start, end, display) {
                 var api = this.api();

@@ -30,12 +30,12 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Action</th>
                                     <th>Full Name</th>
                                     <th>Email</th>
                                     <th>Contact Number</th>
                                     <th>Position Applied</th>
                                     <th>Applicant CV</th>
-                                    <th>Action</th>
                                 </tr>
                             </thead>
                         </table>
@@ -58,12 +58,12 @@
             scrollX: true, // Enable horizontal scrolling
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+                { data: 'action', name: 'action', orderable: false, searchable: false },
                 { data: 'full_name', name: 'full_name' },
                 { data: 'email', name: 'email' },
                 { data: 'contact_number', name: 'contact_number' },
                 { data: 'position_applied', name: 'position_applied' },
                 { data: 'user_cv', name: 'user_cv'},
-                { data: 'action', name: 'action', orderable: false, searchable: false },
             ]
         });
     });

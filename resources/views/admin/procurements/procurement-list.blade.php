@@ -4,7 +4,7 @@
 
 @push('page-css')
 <style>
-    /* Add your custom CSS styles here */
+      
 </style>
 @endpush
 
@@ -69,13 +69,13 @@
             scrollX: true, // Enable horizontal scrolling
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+                { data: 'action', name: 'action', orderable: false, searchable: false },
                 { data: 'product_name', name: 'product_name' },
                 { data: 'supplier_name', name: 'supplier_name' },
                 { data: 'quantity', name: 'quantity' },
                 { data: 'cost', name: 'cost' },
                 { data: 'other_cost', name: 'other_cost' },
                 { data: 'total_cost', name: 'total_cost' },
-                { data: 'action', name: 'action', orderable: false, searchable: false },
             ],
             "footerCallback": function (row, data, start, end, display) {
                 var api = this.api();
